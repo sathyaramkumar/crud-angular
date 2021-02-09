@@ -1,0 +1,26 @@
+<div class="container">
+    <header class="d-flex justify-content-between align-items-center my-3">
+        <h1>Details</h1>
+        <button class="btn btn-primary" style="height: 38px;">Create details</button>
+    </header>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dl of detailList">
+                <td>{{dl.id}}</td>
+                <td class="w-25">{{dl.title}}</td>
+                <td class="w-50">{{dl.body}}</td>
+                <td>
+                    <button routerLink="view/{{dl.id}}" class="btn btn-warning">View</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
